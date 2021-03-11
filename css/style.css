@@ -1,0 +1,1027 @@
+
+/*additional resets  --start--*/
+a{
+text-decoration: none;
+}
+input {/*обнуление дефолтных стилей инпутов*/
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}
+/*additional resets  --end--*/
+
+.container{/*задание контейнера для контента*/
+width: 1280px;
+margin: 0 auto;
+}
+/*Header. Nav.*/
+.header{/*картинка на всю ширину для хэдера+подложка фон при отсутствии загрузки картинки*/
+background-color: #535250;
+background-image: url(../img/bg_header.png);
+background-repeat: no-repeat;
+background-position: 50% 50%;
+padding-top: 40px;
+padding-bottom: 50px;
+background-size: cover;
+}
+.header__nav{/*оболочка для верхнего модуля навигации в хэдере*/
+display: flex;
+justify-content: space-between;
+margin-bottom: 315px;
+}
+.header__nav-items{/*оболочка верхнего модуля навигации объединяет ссылки меню и иконки*/
+display: flex;
+justify-content: space-between;
+}
+.header__nav-links{/*оболочка для элементов верхнего модуля навигации в хэдере, объединяет ссылки*/
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 613px;
+margin-right: 54px;
+}
+.header__nav-icons{/*оболочка иконок корзина и поиск верхнего модуля навигации в хэдере*/
+align-self: center;
+display: flex;
+justify-content: space-between;
+width: 72px;
+}
+.header__nav-links>a{/*стилизация ссылок (пунктов меню) верхнего модуля навигации в хэдере */
+color: #FFFFFF;
+font-family: Montserrat;
+font-weight: 300;
+font-size: 14px;
+line-height: 1.22;
+}
+.header__nav-links>a:hover{/*стилизация наведения на ссылки (пунктов меню) верхнего модуля навигации в хэдере */
+color: #C7B299;
+transform: rotateY(180deg);
+letter-spacing: 1px;
+transition: color 600ms ease, rotateY 600ms ease, letter-spacing 600ms ease;
+}
+    /*<Header. Slider*/
+.header__slider{/*оболочка для всех элементов слайдера*/
+color: #FFFFFF;
+text-align: center;
+position: relative;
+padding-left: 356px;
+padding-right: 353px;
+box-sizing: border-box;
+}
+.header__slider-forward{/*позиционирование svg элемента "вперед" навигации слайдера*/
+position: absolute;
+cursor: pointer;
+top: 5%;
+right: 0;
+}
+.header__slider-forward:hover path{/*стилизация при наведении на svg элемент "вперед"*/
+fill: #D3C1AC;
+stroke: none;
+}
+.header__slider-back{/*позиционирование svg элемента "назад" навигации слайдера*/
+position: absolute;
+cursor: pointer;
+top: 5%;
+left: 0;
+}
+.header__slider-back:hover path{/*стлизация при наведении на svg элемент "назад"*/
+fill: #D3C1AC;
+stroke: none;
+}
+.header__slider-uniquetxtblock{/*cтилизация текста на слайдере*/
+font-family: Raleway;
+font-size: 36px;
+line-height: 1.16;
+font-weight: 500;
+}
+.header__slider-templatetxtblock{/*cтилизация текста на слайдере*/
+font-family: Raleway;
+font-size: 52px;
+line-height: 1.17;
+font-weight: 600;
+margin-bottom: 4px;  
+}
+.header__slider>p:nth-of-type(3){/*cтилизация текста на слайдере*/
+font-family: Montserrat;
+font-size: 14px;
+line-height: 1.2;
+font-weight: 400;
+margin-bottom: 58px;
+padding-left: 39px;
+padding-right: 39px;
+}
+.header__slider-button{/*стилизация ссылки под кнопку*/
+color: #FFFFFF;
+font-family: Roboto;
+font-weight: 400;
+font-size: 14px;
+line-height: 1.14;
+padding: 19px 40px;
+background-color: #988574;
+border-radius: 3px;
+text-transform: uppercase;
+}
+.sliderprogress{/*позиционирование пагинации*/
+width: 100px;
+height: 10px;
+display: flex;
+margin-top: 330px;
+align-items: center;
+}
+.sliderprogress li{/*стилизация элементов пагинации*/
+width: 10px;
+height: 10px;
+margin-right: 10px;
+background-color: #FFFFFF;
+border-radius: 50%;
+opacity: 0.5;  
+}
+.sliderprogress li:last-of-type{/*убираем mr у последнего элемента пагинации*/
+margin-right: 0px;
+}
+.sliderprogress li:hover{/*стилизация наведения у эл. пагинации*/
+transform: scale(1.5);
+transition: transform 0.3s linear;
+border: 1px solid #D3C1AD;
+border-radius: 50%;
+background-color: transparent;
+cursor: pointer;
+}
+/*Services*/
+.services__wrapper{/*облочка для блока Services. выравнивание блока, задание размеров через паддинги, bgc*/
+display: flex;
+justify-content: space-around;
+text-align: center;
+padding: 84px 52px 88px 52px;
+background-color: #FFFFFF;
+}
+.service__item{/*оболочка для карточки блока Services*/
+margin-right: 30px;
+position: relative;
+cursor: pointer;
+}
+.service__item::after{/*создание и позиционирование псевдоэлемента (черта внизу блока) для карточки*/
+content: ' ';
+width: 70px;
+height: 0;
+border-bottom: 3px solid #F1EEE9;
+position: absolute;
+display: block;
+right: 115px;
+}
+.service__item:hover svg>path{/*стилизация наведения на карточку (окрашивание элемента svg картинка+transition)*/
+fill: #D3C1AC;
+transition: fill 1s linear;
+stroke: none;
+
+}
+.service__item:hover figcaption{/*стилизация наведения на карточку (окрашивание / поворот и растягивание текста+transition)*/
+color: #D3C1AC;
+letter-spacing: 3px;
+transform: rotateY(180deg);
+transition: color 600ms ease, rotateY 600ms ease, letter-spacing 600ms ease;
+}
+.service__item:hover::after{/*создание нового псевдоэлемента при наведении на карточку (взамен старого)*/
+content: ' ';
+width: 70px;
+height: 0;
+border-bottom: 3px solid #D3C1AC;
+position: absolute;
+display: block;
+right: 115px;
+transition: border-bottom-color 600ms ease;;
+}
+.service__item:last-child{/*убираем mr для последнего элемента*/
+margin-right: 0px;
+}
+/*SVG icons margin bottom (as icons has different form and viewport, also it has own mb)--start---*/
+.service__item-icon-pencil{
+margin-bottom: 22px;
+}
+.service__item-icon-paperblock{
+margin-bottom: 29px;
+}
+.service__item-icon-gear{
+margin-bottom: 28.4px;
+}
+.service__item-icon-folder{
+margin-bottom: 31px;
+}
+/*SVG icons margin bottoms--end---*/
+
+.service__item-title{/*стилизация текста карточки (заголовок)*/
+font-family: Raleway;
+font-weight: 600;
+font-size: 22px;
+line-height: 1.18; 
+color: 55555;
+margin-bottom: 21px;
+}
+.service__item-text{/*стилизация текста карточки (текст)*/
+font-family: Montserrat;
+font-weight: 300;
+font-size: 14px;
+line-height: 1.21;
+color: #000000;
+margin-bottom: 30px;
+}
+/*Waxom is realization*/
+.realization{/*задание блока на всю ширину*/
+background-color: #FBFAF8;
+padding-top: 80px;
+}
+.realization__title{/*стилизация текста (заголовок)*/
+font-family: Raleway;
+font-weight: 600;
+font-size: 30px;
+line-height: 1.17;
+text-align: center;
+color: #555555;
+margin-bottom: 20px;
+}
+.realization__text{/*стилизация и позиционирование текста (текст)*/
+font-family: Montserrat;
+font-weight: 300;
+font-size: 16px;
+line-height: 1.25;
+margin-bottom: 42px;
+text-align: center;
+color: #8C8C8C;
+padding-right: 255px;
+padding-left: 253px;
+box-sizing: border-box;
+}
+.realization__picture{/*стилизация и позиционирование картинки, display: block убирает 1px рамку снизу*/
+display: block;
+padding-right: 22px;
+padding-left: 22px;
+box-sizing: border-box;
+}
+/*Purchase now*/
+.purchase{/*задание блока на всю ширину*/
+background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
+padding: 44px 0 73px 0;    
+}
+.purchase__wrapper{/*оболочка для абсолютного позиционирования кнопки-ссылки*/
+flex-direction: column;
+position: relative;
+    }
+.purchase__theme{/*стилизация текста (заголовок)*/
+font-family: Raleway;
+font-weight: 400;
+font-size: 28px;
+line-height: 1.18;  
+color: #FFFFFF;
+display: block;
+margin-bottom: 6px;
+margin-left: 22px;
+}
+.purchase__theme-first{/*стилизация span элемента в рамках строки*/
+color: #C7B299;
+
+}
+.purchase__template{/*стилизация текста (текст)*/
+font-family: Montserrat;
+font-weight: 300;
+font-size: 18px;
+line-height: 1.18;
+color: #615855;
+display: block;
+margin-left: 22px;
+}
+.purchase__button{/*стилизация ссылки под кнопку*/
+color: #FFFFFF;
+font-family: Roboto;
+font-weight: 400;
+font-size: 14px;
+line-height: 1.14;
+padding: 19px 31px;
+background-color: #988574;
+border-radius: 3px;
+text-transform: uppercase;
+position: absolute;
+left: 1085px;
+top: 35px;
+}
+/*Our Latest Projects. --start--*/
+.projects{/*задание блока на всю ширину*/
+padding-top: 61px;
+padding-bottom: 33px;
+background-color: #FFFFFF;
+}
+.projects__title{/*стилизация текста (заголовок)*/
+font-family: Raleway;
+font-weight: 600;
+font-size: 30px;
+line-height: 1.17;
+text-align: center;    
+color: #555555;
+margin-bottom: 9px;
+}
+.projects__text{/*стилизация текста (текст)*/
+font-family: Montserrat;
+font-weight: 300;
+font-size: 16px;
+line-height: 1.25;
+text-align: center;
+color: #8C8C8C;
+margin-bottom: 27px;
+padding-right: 239px;
+padding-left: 239px;
+box-sizing: border-box;
+}
+.projects__buttons{/*выравнивание кнопок / задание внешнего нижнего отступа*/
+text-align: center;
+margin-bottom: 69px;
+}
+.projects__buttons label{/*стилизация элемента label кнопок type="radio"*/
+font-family: Montserrat;
+font-weight: 300;
+font-size: 14px;
+line-height: 1.22;
+color: #8C8C8C;
+padding-top: 7px;
+padding-bottom: 8px;
+border: 1px solid #EBEBEB;
+border-radius: 3px;
+margin-right: -10px;
+cursor: pointer;
+}
+/*Radio buttons paddings stylization*/
+.projects__buttons>label:nth-of-type(1){
+padding-right: 26px;
+padding-left: 26px;
+}
+.projects__buttons>label:nth-of-type(2){
+padding-right: 17px;
+padding-left: 17px;
+}
+.projects__buttons>label:nth-of-type(3){
+padding-right: 20px;
+padding-left: 20px;
+}
+.projects__buttons>label:nth-of-type(4){
+padding-right: 23px;
+padding-left: 23px;
+}
+.projects__buttons>label:nth-of-type(5){
+padding-right: 14px;
+padding-left: 14px;
+margin-right: 0px;
+}
+input:checked + label {
+background: #998575;
+color: #FFFFFF;  
+}
+/*Our Latest Projects. --end--*/
+.projects__items-wrapper{/*оболочка для карточек описания проектов / задание переноса карточек / позиционирование по центру*/
+display: flex;
+flex-wrap: wrap;
+place-content: center;
+}
+.projects__items-card{/*задание внешних отступов у карточек*/
+margin-right: 30px;
+margin-bottom: 69px;
+cursor: pointer;
+position: relative;
+}
+/*Delete mr for 3th and mr/mb for 6th cards*/
+.projects__items-wrapper figure:nth-child(3){
+margin-right: 0px;
+}
+.projects__items-wrapper figure:nth-child(6){
+margin-right: 0px;
+margin-bottom: 0px;
+}
+/*Delete mb for 4th, 5th cards*/
+.projects__items-wrapper figure:nth-child(4){
+margin-bottom: 0px;
+}
+.projects__items-wrapper figure:nth-child(5){
+margin-bottom: 0px;
+}
+.projects__items-card:hover>.projects__items-card-caption{/*стилизация при наведении на карточку (блок подписи фон)*/
+background-color: #352F2D; 
+}
+
+.projects__items-card:hover span.projects__items-card-title{/*стилизация при наведении на карточку (блок подписи текст1)*/
+color: #FFFFFF;
+}
+.projects__items-card:hover span.projects__items-card-text{/*стилизация при наведении на карточку (блок подписи текст2)*/
+color: #C7B299;
+}
+.projects__items-card:hover::before{/**/
+content: "";
+height: 100%;
+width: 100%;
+position: absolute;
+background-color: #352F2D;    
+z-index: 15;
+opacity: 0.5;
+outline: none;
+}
+.projects__items-card-photo{/*убираем нижнюю рамку в 1px у каритнок*/
+display: block;
+position: relative;
+z-index: 10;    
+}
+.projects__items-card-caption{/*стилизация блока*/
+background-color: #FBFAF8; 
+padding-top: 26px;
+padding-left: 23px;
+padding-bottom: 26px;
+position: relative;
+z-index: 20;   
+}
+.projects__items-card-title{/*стилизация текста (заголовок)*/
+display: block;
+font-family: Raleway;
+font-weight: 500;
+font-size: 20px;
+line-height: 1.15;
+color: #C7B299;
+margin-bottom: 8px;
+}
+.projects__items-card-text{/*стилизация текста (текст)*/
+display: block;
+font-family: Montserrat;
+font-weight: 300;
+font-size: 14px;
+line-height: 1.22;
+color: #C7B299;
+}
+
+.projects__load-button{/*стилизация ссылки под кнопку*/
+padding: 19px 47px;
+background-color: #988574;
+border-radius: 3px;
+font-family: Roboto;
+font-weight: 400;
+font-size: 14px;
+line-height: 1.14;
+text-transform: uppercase;
+color: #FFFFFF;
+margin-top: 47px;
+}
+
+/*Video presentation*/
+.video-wrapper{/*оболочка для видео блока*/
+position: relative;
+overflow: hidden;
+}
+.fullScreenDiv{/*задание свойств для отображения видео на весь экран*/
+width: 100%;
+background-color: gray;
+position: relative;
+}
+#MyVideo{
+width: 100%; 
+margin: auto;
+display: block;
+}
+button {/*обнуление дефолтных стилей элемента button*/
+border: none;
+outline: none;
+}
+.video-content{/*оболочка с выравниванием и абсолютным позиционированием текста для видео*/
+width: 100%; 
+height: 100%;
+position: absolute; 
+top: 0; 
+left: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.video-content:hover, #video-content__button:hover{
+cursor: pointer;
+}
+#video-content__button:hover>svg>path{/*стилизация наведения на иконку видео play (окрашивание svg элемента)*/
+fill:blueviolet;
+transition: fill 1s linear;
+}
+#video-content__button{/*кнопка тэг button для блока видео в виде svg элемента с подложкой */
+background-color: #000000;
+opacity: 50%;
+width: 100px;
+height: 100px;
+border-radius: 50%;
+margin-bottom: 31px;
+align-self: center;
+}
+
+.video-conten__title{/*стилизация текста (заголовок)*/
+font-family: Raleway;
+font-weight: 500;
+font-size: 30px;
+line-height: 1.17;
+color: #FFFFFF;
+margin-bottom: 18px;
+align-self: center;
+}
+.video-conten__text{/*стилизация текста (текст)*/
+font-family: Montserrat;
+font-weight: 300;
+font-size: 16px;
+line-height: 1.25;
+color: #FFFFFF;
+margin-bottom: 18px;
+width: 570px;
+text-align: center;
+}
+
+.video-conten__time{/*стилизация текста (текст)*/
+font-family: Montserrat;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.25;
+color: #C7B3DE;
+align-self: center;
+}
+
+
+/*Mobile Devices*/
+.Mdevices{ /*установка секции на всю ширину экрана*/
+background-color: #FBFAF8;
+padding-top: 78px;
+}
+.Mdevices__wrapper{/*установка обёртки для внутреннего контена (фото, текст, список - всё блочные элементы), выравнине контента в блоке происходит за счёт внутренних отступов, заданных для обёртки и отображения display:flex для контента. Обязательно box-sizing: border-box; иначе искажется размер блока .container*/
+padding-left: 98px;
+padding-right: 20px;
+box-sizing: border-box;
+display: flex;
+}
+
+.Mdevices__content{/*разметка блока с текстом и списком при помощи верхнего внутреннего отступа*/
+    padding-top: 190px;
+    padding-left: 64px;
+}
+.Mdevices__content-title{/*стилизация заголовка секции*/
+font-family: Raleway;
+font-weight: 600;
+font-size: 30px;
+line-height: 1.17;
+color: #555555;
+margin-bottom: 20px;
+}
+.Mdevices__content-text{/*стилизация текста секции*/
+font-family: Montserrat;
+font-weight: 300;
+font-size: 16px;
+line-height: 1.25;
+color: #8C8C8C;
+margin-bottom: 50px;
+}
+.Mdevices__content-list{/*стилизация текста списка ul*/
+font-family: Montserrat;
+font-weight: 300;
+font-size: 16px;
+line-height: 1.25;
+color: #8C8C8C;
+margin-left: 95px;
+position: relative; /*задаём position: relative для родителя, чтобы абсолютно спозиционировать дочерние псевдоэлементы списка*/
+}
+.Mdevices__content-list>li{
+margin-bottom: 10px;
+}
+.Mdevices__content-list>li:last-of-type{/*убираем mb у последнего элемента списка */
+margin-bottom: 0px;
+}
+.Mdevices__content-list>li::before{/*установка кастомных маркеров (псевдоэлемент) у элементов списка*/
+content: url(../img/circle_arrow.svg);
+position: absolute; /*абсолютное позиционипрование относительно родителя ul*/
+left: -29px;
+}
+/*Counters*/
+.counters{/*блок на всю ширину*/
+background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
+padding-top: 36px;
+padding-bottom: 34px;
+}
+.counters__wrapper{/*оболочка для элементов блока для их выравнивания*/
+display: flex;
+justify-content: center;
+}
+.counters__item{/*задание выравнивания текста и правых внешних отсупов*/
+text-align: center;
+margin-right: 70px;
+}
+.counters__item:last-of-type{/*убираем mr у последенего элемента*/
+margin-right: 0px;
+}
+.counters__item-number{/*стилизация текста*/
+font-family: Montserrat;
+font-weight: 300;
+font-size: 48px;
+line-height: 1.23;
+color: #FFFFFF;
+display: block;    
+}
+.counters__item-text{/*стилизация текста*/
+font-family: Montserrat;
+font-weight: 300;
+font-size: 14px;
+line-height: 1.21;    
+color: #C7B299;
+display: block;
+}
+/*Recent Posts*/
+.recent{/*задание блока на всю ширину*/
+background-color: #FFFFFF;
+padding-top: 100px;
+padding-bottom: 38px;
+}
+.recent__title{/*стилизация текста (заголовок)*/
+text-align: center;
+font-family: Raleway;
+font-weight: 600;
+font-size: 30px;
+line-height: 1.17;
+color: #555555;
+margin-bottom: 20px;
+}
+.recent__text{/*стилизация текста (заголовок)*/
+text-align: center;
+font-family: Montserrat;
+font-weight: 300;
+font-size: 16px;
+line-height: 1.75;
+color: #8C8C8C;
+padding-left: 252px;
+padding-right: 253px;/*текст зажат внутренними отступами, за счёт этого переносится на две сроки, в соответствии с мактом дизайнера*/
+box-sizing: border-box; /*иначе блок разъезжается под воздействием паддингов*/
+padding-bottom: 30px;
+}
+.recent__postitems-wrapper{/*оболочка для карточек postitems*/
+display: flex;
+margin-bottom: 54px;
+}
+.recent__postitems-block{/*формирование карточки postitem*/
+position: relative;
+margin-right: 85px;
+}
+.recent__postitems-block::before{/*создание элемента outline (рамка внутри блока с заданным отступом во внутрь блока 1px) через псевдоэлемент*/
+content: "";
+height: 100%;
+width: 100%;
+outline: 1px solid #B2B2B2;
+outline-offset: -1px;
+position: absolute;    
+}
+.recent__postitems-block:last-of-type{/*убираем mr у последней карточки*/
+margin-right: 0px;
+}
+.recent__postitems-photo{/*убираем 1px нижнюю рамку у картинки. ставим картинку поверх рамки outline (z-index)*/
+display: block;
+position: relative;
+z-index: 10;
+}
+.recent__postitems-date{/*оболочка для элемента с датой и указанием месяца*/
+display: flex;
+flex-direction: column;
+text-align: center;
+position: absolute;
+top: 17px;
+left: 23px;
+z-index: 100;
+}
+.recent__postitems-date-Number{/*стилизация блока / отдельное задание border radius для рахных углов*/
+font-family: Montserrat;
+font-weight: 300;
+font-size: 30px;
+line-height: 1.23;      
+color: #FFFFFF;
+padding: 1px 7px;
+background-color: #363636;
+border-radius: 3px;
+border-bottom-right-radius: 0px;
+border-bottom-left-radius: 0px;
+}
+
+.recent__postitems-date-Month{/*стилизация блока / отдельное задание border radius для рахных углов*/
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 1.16;
+color: #FFFFFF;
+padding: 6px 13px 5px 13px;
+background-color: #242424;
+border-radius: 3px;
+border-top-left-radius: 0px;
+border-top-right-radius: 0px;
+}
+.recent__postitems-caption{/*установка внутренних отступов*/
+padding-top: 30px;
+padding-left: 23px;
+padding-bottom: 22px;
+position: relative;/*чтобы работал z-index*/
+z-index: 20;
+
+}
+.recent__postitems-caption-title{/*стилизация текста*/
+font-family: Raleway;
+font-weight: 500;
+font-size: 20px;
+line-height: 1.15;
+color: #555555;
+margin-bottom: 22px;
+}
+.recent__postitems-caption-text{/*стилизация текста*/
+font-family: Montserrat;
+font-weight: 300;
+font-size: 14px;
+line-height: 1.57;   
+color: #000000;
+margin-bottom: 17px;    
+}
+.recent__postitems-caption-readmore{/*стилизация текста*/
+font-family: Montserrat;
+font-weight: 300;
+font-size: 14px;
+line-height: 1.57;   
+color: #C7B299;
+cursor: pointer;
+}
+.recent__postitems-caption-readmore::after{/*создание псевдоэлемента для readmore*/
+content: url("../img/read_more_icon.svg");
+margin-left: 9px;
+}
+/*hover эффект по карточке postitems--START-- */
+.recent__postitems-block:hover .recent__postitems-date-Number{
+background-color: #C7B199;   
+}
+.recent__postitems-block:hover .recent__postitems-date-Month{
+background-color: #A48D71;       
+}
+.recent__postitems-block:hover .recent__postitems-caption{
+background-color: #352F2D;
+opacity: 1;
+}
+.recent__postitems-block:hover .recent__postitems-caption-title{
+color: #C7B299;
+}
+.recent__postitems-block:hover .recent__postitems-caption-text{
+color: #FFFFFF;
+}
+.recent__postitems-block:hover::before{/**/
+content: "";
+height: 100%;
+width: 100%;
+position: absolute;
+background-color: #352F2D;    
+z-index: 15;
+opacity: 0.5;
+outline: none;
+}
+/*hover эффект по карточке postitems--END-- */
+
+.recent__postitems-navigation{
+display: flex;
+justify-content: center; 
+}
+.recent__postitems-navigation>input{/*обнуление всех отсупов у элементов input*/
+margin: 0;
+padding: 0;
+}
+.recent__postitems-navigation>label{/*обнуление всех отсупов у элементов label*/
+margin: 0;
+padding: 0;
+}
+.recent__postitems-navigation>label:first-of-type{/*после обнуления, установка нужного расстояния между элементами навигации, согласно макета*/
+margin-right: 18px;    
+}
+.recent__postitems-navigation>label:hover{/*стилизация курсора при наведении*/
+cursor: pointer;
+    }
+.recent__postitems-navigation>label:hover svg>path{/*стилизация элемента навигации при наведении*/
+fill: #C7B299;
+}
+
+/*Partners*/
+.partners{/*блок на всю ширину+паддинги для формирования высоты*/
+background-color: #535250;
+background-image: url(../img/bg_partners.png);
+background-repeat: no-repeat;
+background-position: 50% 50%;
+padding-top: 140px;
+padding-bottom: 139px;
+background-size: cover;
+}
+.partners__logo{
+display: flex;
+justify-content: center;
+}
+.partners__logo>img{/*формируются mr у всех внутренних элементов для позиционирования логотипов*/
+margin-right: 75px;
+}
+.partners__logo>img:last-of-type{/*убираем отсуп у последнего элемента*/
+margin-right: 0;
+}
+/*Footer*/
+.footer{/*блок на всю ширину*/
+background-color: #191919;
+padding-top: 74px;
+}
+.footer-wrapper{
+position: relative;
+display: flex;
+justify-content: center;
+padding-top: 33px;
+padding-bottom: 128px;
+}
+/*Footer Logo Block*/
+.footer__waxomLogo{
+position: absolute;
+width: 270px;
+top: 0;
+left: 13px;
+}
+.footer__waxomLogo-text{
+font-family: Montserrat;
+font-weight: 300;
+font-size: 14px;
+line-height: 1.21;
+color: #555555;
+}
+.footer__waxomLogo-read{
+font-family: Montserrat;
+font-weight: 400;
+font-size: 14px;
+line-height: 1.21;    
+color: #D1D1D1;
+}
+.footer__waxomLogo img{
+margin-bottom: 18px;
+}
+.footer__waxomLogo p{
+display: block;
+margin-bottom: 18px;
+}
+.footer__waxomLogo-read svg{/*отступ svg элемента от строчного элемента*/
+margin-left: 5px;
+}
+/*Footer Posts Block*/
+.footer__posts{
+margin-left: 355px;
+margin-right: 49px;
+width: 30%;
+}
+.footer__posts>h2{/*стилизация текста, обращение через родительский блок*/
+font-family: Raleway;
+font-weight: 600;
+font-size: 24px;
+line-height: 1.17;
+color: #FFFFFF; 
+margin-bottom: 24px;   
+}
+.footer__posts>p{
+font-family: Montserrat;
+font-weight: 300;
+font-size: 14px;
+line-height: 1.21;
+color: #555555; 
+display: block;
+margin-bottom: 12px;
+}
+.footer__posts>p>span{/*обращение для стилизации через родительский блок*/
+font-family: Montserrat;
+font-weight: 300;
+font-size: 12px;
+line-height: 1.25;
+color: #363636;
+display: block;
+margin-bottom: 6px;
+}
+.footer__posts>p:hover span{/*эффект при наведении*/
+color: #FFFFFF;
+cursor: pointer;
+}
+.footer__posts>p:hover{/*эффект при наведении*/
+color: #C7B299;
+cursor: pointer;
+}
+.footer__posts p:last-of-type{/*обнуление mb у последнего элемента*/
+margin-bottom: 0;
+}
+.footer__posts p::after{/*полоска (с нулевой границей) через псевдоэлемент. display:block иначе появляется как строчный элемент справа*/
+content: " ";
+width: 270px;
+height: 1px;
+background-color: #242424;
+display: block;
+margin-top: 16px;
+}
+.footer__posts p:last-of-type::after{/*убираем псевдоэлемент у последнего элемента*/
+content: none;
+}
+
+/*Footer Twitter Block*/
+.footer__twitter{
+margin-right: 48px;
+width: 30%;
+}
+.footer__twitter>h2{/*стилизация текста, обращение через родительский блок*/
+font-family: Raleway;
+font-weight: 600;
+font-size: 24px;
+line-height: 1.17;
+color: #FFFFFF;
+margin-bottom: 23px;
+}
+.footer__twitter>p{/*стилизация текста, обращение через родительский блок*/
+font-family: Montserrat;
+font-weight: 300;
+font-size: 14px;
+line-height: 1.21;
+color: #555555;
+margin-bottom: 6px;
+display: block;
+}
+.footer__twitter>p>span{/*стилизация текста, обращение через родительский блок*/
+color: #00BFF3;
+cursor: pointer;
+}
+.footer__twitter>span{/*стилизация текста, обращение через родительский блок*/
+font-family: Montserrat;
+font-weight: 300;
+font-size: 12px;
+line-height: 1.25;
+color: #363636;
+margin-bottom: 29px;
+display: block;
+}
+.footer__twitter>span:last-of-type{/*обнуление mb у последнего элемента*/
+margin-bottom: 0;
+}
+.footer__twitter>span::after{/*полоска (с нулевой границей) через псевдоэлемент. display:block иначе появляется как строчный элемент справа*/
+content: " ";
+width: 270px;
+height: 1px;
+background-color: #242424;
+display: block;
+margin-top: 16px;
+}
+.footer__twitter span:last-of-type::after{/*убираем псевдоэлемент у последнего элемента*/
+content: none;
+}
+
+
+/*Footer Widget Block*/
+.footer__widget{
+width: 30%;
+display: flex;
+flex-wrap: wrap;
+margin-right: 17px;
+margin-bottom: 18px;
+}
+.footer__widget>h2{/*стилизация текста, обращение через родительский блок*/
+font-family: Raleway;
+font-weight: 600;
+font-size: 24px;
+line-height: 1.17;
+color: #FFFFFF;
+margin-bottom: 23px;
+display: block;
+}
+.footer__widget>img{
+display: block;
+margin-right: 8px;
+margin-bottom: 9px;
+}
+.footer__widget>img:nth-of-type(even){/*убираем mr у чётных элементов*/
+margin-right: 0;
+}
+.footer__widget>img:nth-of-type(3){/*убираем mb у заданного элементов*/
+margin-bottom: 0;
+}
+.footer__widget>img:nth-of-type(4){/*убираем mb у заданного элементов*/
+margin-bottom: 0;
+}
+/*Footer Copyright*/
+.footer__copyright{/*на всю ширину*/
+background-color: #101010;
+padding-top: 58px;
+padding-bottom: 41px;
+}
+.footer__copyright-wrapper{/*доп оболочка*/
+padding-left: 13px;
+font-family: Montserrat;
+font-weight: 300;
+font-size: 13px;
+line-height: 1.23;
+color: #555555;
+}
+.footer__copyright-wrapper>a:visited{/*стилизация цвета ссылок (чтобы не были синими)*/
+color: #555555;
+}
+.footer__copyright-wrapper>a:hover{/*стилизация наведения*/
+color: #BAA78F;
+}
+div.footer__copyright-wrapper *{/*mr для всех элементов в dive*/
+margin-right: 25px;
+}
+.footer__copyright-wrapper a:last-child{/*убираем mr  у последнего элемента*/
+margin-right: 0;
+}
